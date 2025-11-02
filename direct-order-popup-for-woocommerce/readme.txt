@@ -59,7 +59,7 @@ Add a button with class `DOPW-quick-order-btn` and `data-product-id`, `data-prod
 The plugin prompts customers to select required variations before placing the order.
 
 = Where can I get support? =
-* Support: https://github.com/devnajmus/quick-order-popup-checkout
+* Support: https://github.com/devnajmus/direct-order-popup-for-woocommerce
 
 == Screenshots ==
 1. Quick Order button in admin or frontend.
@@ -75,5 +75,6 @@ The plugin prompts customers to select required variations before placing the or
 * Initial release with popup quick-order, simple & variable product support, multiple product selection, and AJAX checkout.
 
 == Additional Information ==
-* **Support**: https://github.com/devnajmus/quick-order-popup-checkout
+* **Support**: https://github.com/devnajmus/direct-order-popup-for-woocommerce
 * **License**: GPLv2 or later
+
