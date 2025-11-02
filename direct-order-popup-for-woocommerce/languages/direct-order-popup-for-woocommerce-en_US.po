@@ -1,0 +1,187 @@
+# Copyright (C) 2025 Direct Order Popup for WooCommerce
+# This file is distributed under the same license as the Direct Order Popup for WooCommerce package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Direct Order Popup for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/direct-order-popup-for-woocommerce\n"
+"POT-Creation-Date: 2025-01-10 17:00+0000\n"
+"PO-Revision-Date: 2025-01-10 17:00+0000\n"
+"Last-Translator: Direct Order Popup Team\n"
+"Language-Team: English (US)\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: direct-order-popup-for-woocommerce.php:31
+msgid "Direct Order Popup for WooCommerce requires WooCommerce to be installed and activated."
+msgstr "Direct Order Popup for WooCommerce requires WooCommerce to be installed and activated."
+
+#: includes/class-DOPW-admin.php:41
+msgid "Order Now"
+msgstr "Order Now"
+
+#: includes/class-DOPW-admin.php:119
+msgid "Direct Order Popup for WooCommerce"
+msgstr "Direct Order Popup for WooCommerce"
+
+#: includes/class-DOPW-admin.php:120
+msgid "Direct Order"
+msgstr "Direct Order"
+
+#: includes/class-DOPW-admin.php:150
+msgid "Button Text"
+msgstr "Button Text"
+
+#: includes/class-DOPW-admin.php:157
+msgid "Order Now"
+msgstr "Order Now"
+
+#: includes/class-DOPW-admin.php:165
+msgid "Place Order Button Color"
+msgstr "Place Order Button Color"
+
+#: includes/class-DOPW-admin.php:175
+msgid "Total Box Color"
+msgstr "Total Box Color"
+
+#: includes/class-DOPW-admin.php:185
+msgid "Product Price Color"
+msgstr "Product Price Color"
+
+#: includes/class-DOPW-ajax.php:40
+msgid "Invalid product ID"
+msgstr "Invalid product ID"
+
+#: includes/class-DOPW-ajax.php:45
+msgid "Not a variable product"
+msgstr "Not a variable product"
+
+#: includes/class-DOPW-ajax.php:207
+msgid "Invalid order data"
+msgstr "Invalid order data"
+
+#: includes/class-DOPW-ajax.php:211
+msgid "WooCommerce is required"
+msgstr "WooCommerce is required"
+
+#: includes/class-DOPW-ajax.php:282
+msgid "Shipping"
+msgstr "Shipping"
+
+#: includes/class-DOPW-ajax.php:297
+msgid "Order created successfully"
+msgstr "Order created successfully"
+
+#: includes/class-DOPW-frontend.php:152
+msgid "Order Now"
+msgstr "Order Now"
+
+#: templates/quickorder-popup.php:30
+msgid "Quick Order"
+msgstr "Quick Order"
+
+#: templates/quickorder-popup.php:37
+msgid "Customer Information"
+msgstr "Customer Information"
+
+#: templates/quickorder-popup.php:40
+msgid "Name"
+msgstr "Name"
+
+#: templates/quickorder-popup.php:44
+msgid "Phone"
+msgstr "Phone"
+
+#: templates/quickorder-popup.php:50
+msgid "Email"
+msgstr "Email"
+
+#: templates/quickorder-popup.php:54
+msgid "Address"
+msgstr "Address"
+
+#: templates/quickorder-popup.php:62
+msgid "Product Information"
+msgstr "Product Information"
+
+#: templates/quickorder-popup.php:69
+msgid "Subtotal:"
+msgstr "Subtotal:"
+
+#: templates/quickorder-popup.php:76
+msgid "Shipping Method"
+msgstr "Shipping Method"
+
+#: templates/quickorder-popup.php:83
+msgid "Select shipping method"
+msgstr "Select shipping method"
+
+#: templates/quickorder-popup.php:154
+msgid "No shipping methods available"
+msgstr "No shipping methods available"
+
+#: templates/quickorder-popup.php:158
+msgid "WooCommerce shipping not available"
+msgstr "WooCommerce shipping not available"
+
+#: templates/quickorder-popup.php:163
+msgid "Shipping Cost:"
+msgstr "Shipping Cost:"
+
+#: templates/quickorder-popup.php:178
+msgid "Payment Method"
+msgstr "Payment Method"
+
+#: templates/quickorder-popup.php:196
+msgid "No payment methods available."
+msgstr "No payment methods available."
+
+#: templates/quickorder-popup.php:199
+msgid "WooCommerce payment system not available."
+msgstr "WooCommerce payment system not available."
+
+#: templates/quickorder-popup.php:206
+msgid "Total:"
+msgstr "Total:"
+
+#: templates/quickorder-popup.php:212
+msgid "Cancel"
+msgstr "Cancel"
+
+#: templates/quickorder-popup.php:213
+msgid "Place Order"
+msgstr "Place Order"
+
+#: assets/js/quickorder.js:122
+msgid "Please select variation"
+msgstr "Please select variation"
+
+#: assets/js/quickorder.js:512
+msgid "Please complete: "
+msgstr "Please complete: "
+
+#: assets/js/quickorder.js:517
+msgid "Please add at least one product"
+msgstr "Please add at least one product"
+
+#: assets/js/quickorder.js:524
+msgid "Please select variations for: "
+msgstr "Please select variations for: "
+
+#: assets/js/quickorder.js:567
+msgid "Placing Order..."
+msgstr "Placing Order..."
+
+#: assets/js/quickorder.js:579
+msgid "Order placed! ID: "
+msgstr "Order placed! ID: "
+
+#: assets/js/quickorder.js:584
+msgid "Order failed: "
+msgstr "Order failed: "
+
+#: assets/js/quickorder.js:589
+msgid "An error occurred while placing the order."
+msgstr "An error occurred while placing the order."

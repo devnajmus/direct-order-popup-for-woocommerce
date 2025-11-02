@@ -1,0 +1,324 @@
+/* Scoped and isolated styles for Quick Order Popup */
+:where(#DOPW-popup) {
+  --DOPW-accent: #1f7a8c; /* Default from admin settings */
+  --DOPW-total-bg: #1f7a8c; /* Default from admin settings */
+  --DOPW-product-price: #6b7280; /* Default from admin settings */
+  --DOPW-bg: #ffffff;
+  --DOPW-text: #1f2a44;
+  --DOPW-border: #e5e7eb;
+  --DOPW-error: #dc2626;
+
+  all: initial; /* Reset inherited styles */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+  contain: content; /* CSS containment to limit style leakage */
+}
+
+#DOPW-popup * {
+  box-sizing: inherit;
+}
+
+#DOPW-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#DOPW-popup.DOPW-open {
+  display: flex;
+}
+
+#DOPW-popup .DOPW-popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+}
+
+#DOPW-popup .DOPW-popup-content {
+  background: var(--DOPW-bg);
+  color: var(--DOPW-text);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 16px;
+  margin: 0 auto; /* Ensure no side offset */
+}
+
+/* Header */
+#DOPW-popup .DOPW-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--DOPW-border);
+}
+
+#DOPW-popup .DOPW-popup-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#DOPW-popup .DOPW-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--DOPW-text);
+}
+
+/* Customer Information */
+#DOPW-popup .DOPW-customer-info h4 {
+  font-size: 1.1rem;
+  margin: 16px 0 8px;
+}
+
+#DOPW-popup .DOPW-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#DOPW-popup .DOPW-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#DOPW-popup .DOPW-form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+#DOPW-popup .DOPW-form-group input,
+#DOPW-popup .DOPW-form-group textarea,
+#DOPW-popup .DOPW-form-group select {
+  border: 1px solid var(--DOPW-border);
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+#DOPW-popup .DOPW-form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Product Information */
+#DOPW-popup .DOPW-products h4 {
+  font-size: 1.1rem;
+  margin: 16px 0 8px;
+}
+
+#DOPW-popup .DOPW-product-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--DOPW-border);
+}
+
+#DOPW-popup .DOPW-product-image img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#DOPW-popup .DOPW-product-info {
+  flex: 1;
+}
+
+#DOPW-popup .DOPW-product-title {
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+
+#DOPW-popup .DOPW-variation-info {
+  font-size: 0.85rem;
+  color: var(--DOPW-product-price);
+}
+
+#DOPW-popup .DOPW-product-price {
+  font-size: 0.9rem;
+  color: var(--DOPW-product-price);
+}
+
+#DOPW-popup .DOPW-quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#DOPW-popup .DOPW-qty-btn {
+  background: var(--DOPW-border);
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+#DOPW-popup .DOPW-quantity {
+  width: 60px;
+  text-align: center;
+  border: 1px solid var(--DOPW-border);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+#DOPW-popup .DOPW-row-total {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#DOPW-popup .DOPW-remove-product {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--DOPW-error);
+}
+
+#DOPW-popup .DOPW-variation-required {
+  color: var(--DOPW-error);
+}
+
+#DOPW-popup .DOPW-subtotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 1rem;
+}
+
+/* Shipping Method */
+#DOPW-popup .DOPW-shipping h4 {
+  font-size: 1.1rem;
+  margin: 16px 0 8px;
+}
+
+#DOPW-popup .DOPW-shipping select {
+  width: 100%;
+  padding: 8px;
+}
+
+#DOPW-popup .DOPW-shipping-cost {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 1rem;
+}
+
+#DOPW-popup .DOPW-payment-methods {
+  margin: 16px 0;
+}
+
+#DOPW-popup .DOPW-payment-methods legend {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+#DOPW-popup .DOPW-payment-method {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+#DOPW-popup .DOPW-payment-title {
+  font-weight: 600;
+}
+
+#DOPW-popup .DOPW-payment-desc {
+  font-size: 0.85rem;
+  color: var(--DOPW-product-price);
+}
+
+/* Total */
+#DOPW-popup .DOPW-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--DOPW-total-bg);
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Footer Actions */
+#DOPW-popup .DOPW-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  gap: 12px;
+}
+
+#DOPW-popup .DOPW-footer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#DOPW-popup .DOPW-cancel {
+  background: var(--DOPW-border);
+  color: var(--DOPW-text);
+}
+
+#DOPW-popup .DOPW-place-order {
+  background: var(--DOPW-accent);
+  color: #ffffff;
+}
+
+#DOPW-popup .DOPW-place-order:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (min-width: 480px) {
+  #DOPW-popup .DOPW-popup-content {
+    width: 85%;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  #DOPW-popup .DOPW-form-row {
+    flex-direction: row;
+  }
+
+  #DOPW-popup .DOPW-form-group {
+    flex: 1;
+  }
+
+  #DOPW-popup .DOPW-popup-content {
+    padding: 24px;
+    width: 80%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #DOPW-popup .DOPW-popup-content {
+    width: 70%;
+    max-width: 600px;
+  }
+}
